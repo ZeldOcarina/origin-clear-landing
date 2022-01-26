@@ -1,0 +1,23 @@
+{
+  "name": "originclear-landing",
+  "version": "1.0.0",
+  "description": "In this simple setup, you can devlop simple HTML applications by using Webpack 5 with hot reload and scss support.",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1",
+    "parcel": "latest",
+    "sharp": "^0.29.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,149 @@
+.show-blog {
+  p {
+    &:not(first-child),
+    &:not(last-child) {
+      padding: 0.5rem 0;
+    }
+  }
+
+  &__post-image {
+    width: 100%;
+    border-radius: 20px;
+
+    @include respond("tab-port") {
+      border-radius: 0;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    font-family: $body-font;
+    color: $blog-grey;
+    text-transform: capitalize;
+  }
+
+  &__text-container {
+    background-color: $white;
+    padding: 6rem;
+    border-radius: 20px;
+    color: #1f3256;
+    font-family: $body-secondary;
+    font-size: 1.8rem;
+    box-shadow: 15px 25px 37px -5px rgba(0, 0, 0, 0.31);
+    width: 60%;
+    margin: 8rem auto 8rem auto;
+
+    @include respond("laptop") {
+      width: 60%;
+    }
+    @include respond("tab-land") {
+      width: 70%;
+    }
+    @include respond("tab-port") {
+      width: 100%;
+      padding: 6rem 0;
+      border-radius: 0;
+    }
+  }
+
+  &__text-body {
+    @include respond("tab-port") {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 2.5rem;
+    }
+
+    a {
+      color: initial;
+      display: initial;
+      text-transform: none;
+      font-family: "Poppins", sans-serif;
+      color: $color-secondary;
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+
+  &__author-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #f1f1f1;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+    padding: 2rem 5rem;
+    border-radius: 10px;
+
+    @include respond("tab-port") {
+      border-radius: 0;
+    }
+    @include respond("phone-port") {
+      flex-direction: column;
+      padding: 2rem 0;
+    }
+
+    &--author {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &--avatar {
+      width: 7rem;
+      margin-right: 2rem;
+      border-radius: 50%;
+    }
+
+    &--date {
+      margin-left: auto;
+      color: #757575;
+
+      @include respond("phone-port") {
+        margin-left: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .cta {
+    width: 100%;
+    margin-top: 8rem;
+  }
+
+  .contact-form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include respond("phone-port") {
+      font-size: 2.5rem;
+    }
+  }
+}

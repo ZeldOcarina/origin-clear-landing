@@ -1,0 +1,145 @@
+.top-header {
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  background-image: url("/src/images/top-image.png");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    height: 100vh;
+  }
+  @include respond(phone-land) {
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  @include respond(phone-port) {
+    height: 90vh;
+  }
+  @include respond(iphone-5) {
+    height: auto;
+  }
+
+  &__container {
+    @include container(0, 0);
+
+    @include respond(laptop) {
+      margin-top: 18rem;
+    }
+  }
+
+  &__title {
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    width: 50%;
+
+    @include respond(short-laptop) {
+      font-size: 3.5rem;
+      width: 55%;
+    }
+    @include respond(tab-land) {
+      width: 70%;
+    }
+    @include respond(phone-land) {
+      font-size: 2rem;
+    }
+    @include respond(phone-port) {
+      width: 90%;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__top-link {
+    font-family: $title-font;
+
+    &:hover {
+      transform: scale(1.1) translate(5.5rem, 0);
+    }
+  }
+
+  &__bottom-text-container {
+    display: flex;
+    width: 25rem;
+  }
+
+  &__hr {
+    width: 15rem;
+    margin-top: 3rem;
+    margin-right: 1rem;
+    background-color: $white;
+    border: none;
+
+    @include respond(phone-port) {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    font-size: $basic-font-size;
+    color: $white;
+    text-transform: uppercase;
+    font-family: $body-font;
+    font-weight: 500;
+
+    @include respond(phone-port) {
+      width: 100%;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__social-icons {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: $section-width;
+
+    @include respond(phone-port) {
+      position: relative;
+      transform: unset;
+      transform: translateX(0);
+      right: 0;
+      width: 100%;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      @include respond(phone-port) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  &__social-icon {
+    color: $white;
+
+    i {
+      @include respond(phone-port) {
+        font-size: 3.5rem;
+      }
+    }
+
+    &--link {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+
+        @include respond(phone-port) {
+          margin-bottom: 0;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}

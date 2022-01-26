@@ -1,0 +1,138 @@
+$home-info-hr-width: 5rem;
+
+.home-informations {
+  background-image: url("../images/home-informations-bg.png");
+  background-size: cover;
+  background-position: center;
+
+  &__container {
+    @include container(12rem, 12rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16rem;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+    @include respond(phone-port) {
+      width: 80%;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+
+    &--below {
+      @include container(5rem, 5rem);
+      margin-bottom: 16rem;
+
+      @include respond(tab-land) {
+        width: 70%;
+      }
+      @include respond(phone-port) {
+        width: 80%;
+      }
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(-$home-info-hr-width);
+
+    @include respond(phone-port) {
+      transform: none;
+    }
+  }
+
+  &__top-link {
+    display: block;
+    color: $color-secondary;
+  }
+
+  &__hr {
+    background-color: $color-secondary;
+    border: 1px solid lighten($color-secondary, 50%);
+    width: $home-info-hr-width;
+    transform: translateX(-20px);
+
+    @include respond(phone-port) {
+      display: none;
+    }
+  }
+
+  &__left-container {
+    margin-right: 15rem;
+    width: 60rem;
+
+    @include respond(tab-port) {
+      margin-top: 10rem;
+      margin-right: 0;
+      width: 100%;
+    }
+    @include respond(phone-port) {
+      margin-top: 5rem;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 1px;
+
+    @include respond(iphone-5) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__text {
+    margin: 3rem 0 4rem 0;
+    font-size: 1.8rem;
+
+    @include respond(phone-port) {
+      font-size: 2rem;
+    }
+  }
+
+  &__right-container {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+    border-radius: 20px;
+  }
+
+  &__image-cube {
+    width: 20rem;
+    height: 20rem;
+    background-color: lighten($color-secondary, 35%);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-100vw, 6rem);
+    z-index: -1;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+
+    @include respond(phone-port) {
+      display: none;
+    }
+
+    &--visible {
+      transform: translate(-5rem, 6rem);
+    }
+  }
+}

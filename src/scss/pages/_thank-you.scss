@@ -1,0 +1,13 @@
+.thank-you {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__container {
+        h1 {
+            text-align: center;
+        }
+    }
+}

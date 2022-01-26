@@ -1,0 +1,8 @@
+._404 {
+  @include container(4rem, 4rem);
+  text-align: center;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

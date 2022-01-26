@@ -1,0 +1,92 @@
+.navbar {
+  color: $white;
+  position: absolute;
+  height: max-content;
+  width: 100%;
+
+  @include respond(phone-port) {
+    margin-top: 2rem;
+  }
+
+  &--inner {
+    position: relative;
+    background-image: url("/src/images/top-image.png");
+    background-size: cover;
+    background-position: 50% 70%;
+
+    @include respond(phone-port) {
+      margin-top: 0;
+      padding: 3rem 0;
+    }
+  }
+
+  &__container {
+    height: 18rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $section-width;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(tab-land) {
+      width: 80%;
+    }
+    @include respond(phone-land) {
+      height: 13rem;
+    }
+    @include respond(phone-port) {
+      flex-direction: column;
+    }
+
+    &--inner {
+      position: relative;
+    }
+  }
+
+  &__logo {
+    width: 13rem;
+
+    @include respond(phone-land) {
+      width: 10rem;
+    }
+  }
+
+  &__brand {
+    font-size: $basic-font-size;
+    color: $white;
+    letter-spacing: 5px;
+  }
+
+  &__items {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+
+    @include respond(phone-port) {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item {
+    letter-spacing: 1px;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__hr {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 1px;
+    border: none;
+    background-color: darken($white, 20%);
+
+    @include respond(phone-port) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.about-top {
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: $big-text;
+
+    p {
+      line-height: 2;
+    }
+  }
+}

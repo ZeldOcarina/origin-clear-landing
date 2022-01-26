@@ -1,0 +1,62 @@
+$radius: 50% 10rem;
+$bottom-radius: 50% -10rem;
+
+$mobile-radius: 50% 5rem;
+$mobile-bottom-radius: 50% -5rem;
+
+.top-radiant {
+  border-top-left-radius: $mobile-radius;
+  border-top-right-radius: $mobile-radius;
+  background-color: $body-bg-color;
+  padding-top: 10rem;
+
+  @include respond(phone-port) {
+    border-bottom-left-radius: $mobile-radius !important;
+    border-bottom-right-radius: $mobile-radius !important;
+  }
+}
+
+.bottom-radiant {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  padding-bottom: 10rem;
+
+  @include respond(phone-port) {
+    border-bottom-left-radius: $mobile-radius !important;
+    border-bottom-right-radius: $mobile-radius !important;
+  }
+}
+
+.offset-top {
+  transform: translateY(calc($offset - 10rem)) !important;
+}
+
+.offset {
+  transform: translateY($offset);
+}
+
+.double-offset {
+  transform: translateY(calc($offset * 2)) !important;
+  padding-bottom: 10rem;
+}
+
+.triple-offset {
+  transform: translateY(calc($offset * 3 - 5rem)) !important;
+
+  &--bottom {
+    transform: translateY(calc($offset * 3 - 15rem)) !important;
+  }
+}
+
+.orangered {
+  background-color: orangered !important;
+}
+
+.body-wrapper {
+  overflow-y: hidden;
+}
+
+body {
+  //height: calc(12640.296875px - 90rem);
+  overflow-y: hidden;
+}

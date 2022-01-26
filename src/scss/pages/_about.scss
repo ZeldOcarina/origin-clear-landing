@@ -1,0 +1,14 @@
+@import "./sections/about/about-top";
+@import "./sections/about/about-services";
+
+.about {
+  @include container(8rem, 10rem);
+
+  @include respond(laptop) {
+    width: $laptop-container;
+  }
+  @include respond(phone-port) {
+    margin-top: 5rem;
+    width: $laptop-container;
+  }
+}

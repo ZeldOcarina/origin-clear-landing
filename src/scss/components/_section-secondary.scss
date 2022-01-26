@@ -1,0 +1,55 @@
+.section-secondary {
+  position: relative;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: $white;
+  margin-top: 7rem;
+  padding: 10rem 0;
+  background-color: #14455e;
+  transform: translateY($offset);
+  padding-top: calc($offset * -1);
+  z-index: -1;
+
+  @include respond(laptop) {
+    padding-bottom: 20rem;
+  }
+
+  &__title,
+  h2 {
+    color: $color-secondary;
+  }
+  h3 {
+    color: $white;
+  }
+
+  &__decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+  }
+
+  &__figure {
+    width: 70%;
+    margin: 4rem 0 4rem 50%;
+    transform: translateX(-50%);
+
+    @include respond(phone-port) {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    figcaption {
+      opacity: 0.5;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

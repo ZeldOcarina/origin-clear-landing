@@ -1,0 +1,7 @@
+.timing {
+  transform: translateY(calc($offset * 2 - 10rem)) !important;
+
+  &__prime-time-title {
+    margin-top: 6rem;
+  }
+}

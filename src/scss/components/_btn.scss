@@ -1,0 +1,12 @@
+.btn {
+  background-color: $color-secondary;
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  width: max-content;
+  padding: 0 3rem;
+  border: 1px solid $color-primary;
+  margin: 0 auto 0 auto;
+  box-shadow: 8px 8px 0px 0px $color-primary;
+  cursor: pointer;
+}

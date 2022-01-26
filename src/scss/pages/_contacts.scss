@@ -1,0 +1,20 @@
+@import "./sections/contacts/contacts-top";
+@import "./sections/contacts/contacts-contacts";
+
+.contacts {
+  @include respond(phone-port) {
+    width: 100%;
+  }
+  &__map {
+    margin-bottom: 6rem;
+  }
+}
+
+.contacts-top__text {
+  p {
+    @include respond(phone-port) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}

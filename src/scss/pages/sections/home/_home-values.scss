@@ -1,0 +1,74 @@
+.home-values {
+  margin-top: 12rem;
+
+  &__top-container {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    background-image: url("../images/home-values-bg.png");
+
+    @include respond(tab-land) {
+      height: 37vh;
+    }
+    @include respond(phone-land) {
+      height: 100vh;
+    }
+    @include respond(phone-port) {
+      height: auto;
+      padding: 4rem 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+    color: $white;
+    margin-top: 8rem;
+    text-align: center;
+
+    @include respond(phone-port) {
+      margin-top: 0;
+    }
+  }
+
+  &__hr {
+    background-color: darken($white, 10%);
+    border: 1px solid darken($white, 20%);
+    width: 10rem;
+  }
+
+  &__cards-container {
+    @include container(0, 0);
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translateY(-20rem);
+    height: 27rem;
+
+    @include respond(laptop) {
+      width: 90%;
+    }
+    @include respond(tab-land) {
+      height: auto;
+      transform: translateY(-15rem);
+      width: 100%;
+      flex-wrap: nowrap;
+    }
+    @include respond(tab-port) {
+      transform: translateY(-15rem);
+      width: 90%;
+      flex-wrap: wrap;
+    }
+    @include respond(phone-land) {
+      width: 100%;
+    }
+    @include respond(phone-port) {
+      width: 100%;
+      transform: translateY(0);
+    }
+  }
+}

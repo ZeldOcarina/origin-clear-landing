@@ -1,0 +1,10 @@
+.contacts-contacts {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+
+  @include respond(tab-land) {
+    flex-wrap: wrap;
+  }
+}
