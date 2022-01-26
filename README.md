@@ -1,10 +1,10 @@
-# Webpack 5 HTML Setup
+# Origin Clear Landing Page
 
-In this simple setup, you can devlop simple HTML applications by using Webpack 5 with hot reload and scss support.
+This is an HTML page. It's a landing page for Origin Clear.
 
-## Goal of the Project
+## Structure
 
-I want to create the perfect Webpack 5 HTML boilerplate.
+The project is plain html and scss. It's bundled with Parcel.
 
 ## Install
 
