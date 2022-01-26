@@ -5105,6 +5105,9 @@ body {
   justify-content: center;
   height: 100%;
 }
+.central-water {
+  padding-bottom: 18rem;
+}
 .timing {
   transform: translateY(-70rem) !important;
 }
