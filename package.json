@@ -1,11 +1,11 @@
 {
   "name": "originclear-landing",
   "version": "1.0.0",
-  "description": "In this simple setup, you can devlop simple HTML applications by using Webpack 5 with hot reload and scss support.",
+  "description": "An HTML landing page for Origin Clear.",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel --no-cache",
     "build": "parcel build"
   },
   "keywords": [],

@@ -3,5 +3,3 @@ const height = document
   .getBoundingClientRect().height;
 
 document.body.setAttribute("style", `height:${height - 900}px`);
-
-console.log(height);
