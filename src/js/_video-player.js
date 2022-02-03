@@ -2,9 +2,6 @@ const videoIcons = document.querySelectorAll(".video__play-icon");
 const overlays = document.querySelectorAll(".video-player");
 let closeIcons = document.querySelectorAll(".video-player__close");
 
-const ORIGINAL_STRING =
-  "https://player.vimeo.com/video/{{videoId}}?h={{vimeoH}}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479";
-
 function createIframe({ videoId, vimeoH, title }) {
   const iframe = document.createElement("iframe");
   iframe.src = `https://player.vimeo.com/video/${videoId}?h=${vimeoH}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`;
