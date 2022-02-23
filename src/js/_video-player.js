@@ -7,7 +7,6 @@ function createIframe({ videoId, vimeoH, title }) {
   iframe.src = `https://player.vimeo.com/video/${videoId}?h=${vimeoH}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`;
   iframe.setAttribute("frameborder", "0");
   iframe.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
-  //iframe.setAttribute("allowfullscreen", "");
   iframe.setAttribute(
     "style",
     "position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
